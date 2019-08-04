@@ -15,4 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users', 'UsersController@index');
+// Route::get('/users', 'UsersController@index');
+// Route::post('/users', 'UsersController@store');
+// Route::get('/users/create', 'UsersController@create');
+// Route::get('/users/{user}', 'UsersController@show');
+// Route::get('/users/{user}/edit', 'UsersController@edit');
+// Route::patch('/users/{user}/', 'UsersController@update');
+// Route::delete('/users/{user}', 'UsersController@destroy');
+
+
+Route::resource('users', 'UsersController');

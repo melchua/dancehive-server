@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>Users</h1>
+    <ul>
+        @foreach ($users as $user) 
+            <li>
+                <a href="/users/{{ $user->id }}">
+                    <p>{{ $user->username }}</p>
+                </a>
+                <p>{{ $user->email }}</p>
+            </li>
+       @endforeach         
 </body>
 </html>
